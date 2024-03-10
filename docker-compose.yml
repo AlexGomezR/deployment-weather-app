@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  weather-forecast-back:
+    image: weather-forecast-back
+    ports:
+      - "5000:5000"
+    environment:
+      - PORT=<puerto de conexión>
+      - DB_CONNECTION=<string_connection>
+      - API_KEY=<API key>
+
+  weather-forecast-front:
+    image: weather-forecast-front
+    ports:
+      - "3000:3000"
